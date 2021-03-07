@@ -1,0 +1,7 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.MinesweeperController" alignment="center" hgap="10" vgap="10">
+    <Button fx:id="startBtn" onMouseClicked="#startGame">Start</Button>
+    <Button fx:id="exitBtn" onMouseClicked="#exitGame">Exit</Button>
+</GridPane>
