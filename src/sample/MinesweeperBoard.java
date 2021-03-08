@@ -27,7 +27,6 @@ public class MinesweeperBoard {
         this.btnGroup = new Button[N][N];
         this.rootMap = new int[N][N];
         this.initMap();
-        this.printRootMap();
     }
 
     public void start(Stage window) throws Exception {
@@ -55,7 +54,7 @@ public class MinesweeperBoard {
                             break;
                         }
                         default: {
-                            btnGroup[i][j].setTextFill(Color.VIOLET);
+                            btnGroup[i][j].setTextFill(Color.BLACK);
                             break;
                         }
                     }
@@ -118,6 +117,8 @@ public class MinesweeperBoard {
         if (btnGroup[x][y].isDisable()) return;
 
         if (rootMap[x][y] == -1) {
+            btnGroup[x][y].setText("X");
+            btnGroup[x][y].setDisable(true);
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("WARNING");
             alert.setContentText("Booooom, You lose");
